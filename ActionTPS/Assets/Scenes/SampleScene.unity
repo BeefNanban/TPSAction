@@ -694,6 +694,34 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &979372685 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1398682708298560, guid: 1dcce3f16060e724aa17739ed7894afe,
+    type: 2}
+  m_PrefabInternal: {fileID: 1492133334}
+--- !u!114 &979372686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 979372685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5deb9ff5611cb9d4596d397ac57ee8c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontalInput: Horizontal
+  verticallInput: Vertical
+  jumpInput: 32
+  strafeInput: 9
+  sprintInput: 304
+  rotateCameraXInput: Mouse X
+  rotateCameraYInput: Mouse Y
+  customCameraState: 
+  customlookAtPoint: 
+  changeCameraState: 0
+  smoothCameraState: 0
+  keepDirection: 0
 --- !u!1001 &1056731831
 Prefab:
   m_ObjectHideFlags: 0
@@ -846,6 +874,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1398682708298560, guid: 1dcce3f16060e724aa17739ed7894afe, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1dcce3f16060e724aa17739ed7894afe, type: 2}
   m_IsPrefabAsset: 0
@@ -944,6 +976,15 @@ Prefab:
       propertyPath: target
       value: 
       objectReference: {fileID: 241132748}
+    - target: {fileID: 1714874775361886, guid: d610f1212a72b144695863a48bd73aa7, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20392182421351310, guid: d610f1212a72b144695863a48bd73aa7,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d610f1212a72b144695863a48bd73aa7, type: 2}
   m_IsPrefabAsset: 0

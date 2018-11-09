@@ -25,8 +25,6 @@ public class AcquireChanController : MonoBehaviour
 	private float		m_MoveSpeed	= 0.0f;
 	private bool		m_IsGround	= true;
 
-
-
 	/*!
 	 *	----------------------------------------------------------------------
 	 *	@brief	生成
@@ -38,21 +36,21 @@ public class AcquireChanController : MonoBehaviour
 		m_MoveSpeed = m_WalkSpeed;
 	}
 
-	/*!
+    /*!
 	 *	----------------------------------------------------------------------
 	 *	@brief	初期化
 	*/
-//	private void Start()
-//	{
-//	}
+    //void Start()
+    //{
+    //}
 
-	/*!
+    /*!
 	 *	----------------------------------------------------------------------
 	 *	@brief	更新
 	*/
-	private void Update()
-	{
-		if( null == m_RigidBody ) return;
+    private void Update()
+    {
+        if ( null == m_RigidBody ) return;
 		if( null == m_Animator ) return;
 
 		// check ground
@@ -116,7 +114,5 @@ public class AcquireChanController : MonoBehaviour
 		// quit
 		if( Input.GetKeyDown( KeyCode.Escape ) ) Application.Quit();
 	}
-
-
 
 }

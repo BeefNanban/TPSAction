@@ -8,14 +8,6 @@ namespace Invector.CharacterController
     public class vThirdPersonInput : MonoBehaviour
     {
         #region variables
-
-        [Header("Default Inputs")]
-        public string horizontalInput = "Horizontal";
-        public string verticallInput = "Vertical";
-        public KeyCode jumpInput = KeyCode.Space;
-        public KeyCode strafeInput = KeyCode.Tab;
-        public KeyCode sprintInput = KeyCode.LeftShift;
-
         [Header("Camera Settings")]
         public string rotateCameraXInput ="Mouse X";
         public string rotateCameraYInput = "Mouse Y";
@@ -49,9 +41,6 @@ namespace Invector.CharacterController
 
             tpCamera = FindObjectOfType<vThirdPersonCamera>();
             if (tpCamera) tpCamera.SetMainTarget(this.transform);
-
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
         }
 
         protected virtual void LateUpdate()
@@ -75,59 +64,8 @@ namespace Invector.CharacterController
 
         protected virtual void InputHandle()
         {
-            ExitGameInput();
             CameraInput();
-
-            if (!cc.lockMovement)
-            {
-                MoveCharacter();
-                SprintInput();
-                StrafeInput();
-                JumpInput();
-            }
         }
-
-        #region Basic Locomotion Inputs      
-
-        protected virtual void MoveCharacter()
-        {            
-            cc.input.x = Input.GetAxis(horizontalInput);
-            cc.input.y = Input.GetAxis(verticallInput);
-        }
-
-        protected virtual void StrafeInput()
-        {
-            if (Input.GetKeyDown(strafeInput))
-                cc.Strafe();
-        }
-
-        protected virtual void SprintInput()
-        {
-            if (Input.GetKeyDown(sprintInput))
-                cc.Sprint(true);
-            else if(Input.GetKeyUp(sprintInput))
-                cc.Sprint(false);
-        }
-
-        protected virtual void JumpInput()
-        {
-            if (Input.GetKeyDown(jumpInput))
-                cc.Jump();
-        }
-
-        protected virtual void ExitGameInput()
-        {
-            // just a example to quit the application 
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                if (!Cursor.visible)
-                    Cursor.visible = true;
-                else
-                    Application.Quit();
-            }
-        }
-
-        #endregion
 
         #region Camera Methods
 
