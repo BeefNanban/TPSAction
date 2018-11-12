@@ -1,14 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-
-
-/*!
- *	----------------------------------------------------------------------
- *	@brief	アクワイアちゃん簡易操作スクリプト
- *	
-*/
 public class AcquireChanController : MonoBehaviour
 {
 	// Inspector
@@ -111,7 +103,7 @@ public class AcquireChanController : MonoBehaviour
 
         if (Input.GetButtonDown("Attack") && m_IsGround)
         {
-            m_Animator.SetBool("Attack", true);
+            m_Animator.Play("Attack");
         }
 
         // quit
