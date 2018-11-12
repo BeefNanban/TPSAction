@@ -64,6 +64,7 @@
     <Compile Include="Assets\AcquireChan\Scripts\AcquireChanController.cs" />
     <Compile Include="Assets\AcquireChan\Scripts\MotionChanger.cs" />
     <Compile Include="Assets\AcquireChan\Scripts\SimpleFollowCam.cs" />
+    <Compile Include="Assets\AttackEnd.cs" />
     <Compile Include="Assets\guruguru.cs" />
     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion LITE\Scripts\Camera\vThirdPersonCamera.cs" />
     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion LITE\Scripts\CharacterController\vThirdPersonAnimator.cs" />

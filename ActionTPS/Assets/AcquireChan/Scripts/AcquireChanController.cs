@@ -109,10 +109,13 @@ public class AcquireChanController : MonoBehaviour
 			m_RigidBody.AddForce( Vector3.up * m_JumpForce );
 		}
 
+        if (Input.GetButtonDown("Attack") && m_IsGround)
+        {
+            m_Animator.SetBool("Attack", true);
+        }
 
-
-		// quit
-		if( Input.GetKeyDown( KeyCode.Escape ) ) Application.Quit();
+        // quit
+        if ( Input.GetKeyDown( KeyCode.Escape ) ) Application.Quit();
 	}
 
 }
