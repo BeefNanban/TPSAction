@@ -39,6 +39,16 @@ namespace Invector.CharacterController
                 animator.CrossFadeInFixedTime("JumpMove", 0.2f);
         }
 
+        public virtual void Attack()
+        {
+            animator.Play("Attack1");
+        }
+
+        void Hit()
+        {
+
+        }
+
         public virtual void RotateWithAnotherTransform(Transform referenceTransform)
         {
             var newRotation = new Vector3(transform.eulerAngles.x, referenceTransform.eulerAngles.y, transform.eulerAngles.z);

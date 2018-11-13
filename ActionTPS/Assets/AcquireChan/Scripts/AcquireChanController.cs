@@ -16,6 +16,7 @@ public class AcquireChanController : MonoBehaviour
 	private float		m_MoveTime	= 0;
 	private float		m_MoveSpeed	= 0.0f;
 	private bool		m_IsGround	= true;
+    private Vector3 playerPos;
 
 	/*!
 	 *	----------------------------------------------------------------------
@@ -93,6 +94,14 @@ public class AcquireChanController : MonoBehaviour
 		m_Animator.SetBool( "isMove", isMove );
 		m_Animator.SetBool( "isRun", isRun );
 
+        Vector3 diff = transform.position.normalized - playerPos;
+
+        if(diff.magnitude > 0.01f)
+        {
+            transform.rotation = Quaternion.LookRotation(diff);
+        }
+
+        playerPos = transform.position;
 
 		// jump
 		if( Input.GetButtonDown( "Jump" ) && m_IsGround		)
